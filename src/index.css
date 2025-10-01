@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Neue-Regrade";
+  src: url("/fonts/Neue-Regrade-Medium-BF65af35d843ed6.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Neue-Regrade";
+  src: url("/fonts/neue-regrade-2.otf") format("opentype");
+  font-weight: 700; /* Bold */
+}
