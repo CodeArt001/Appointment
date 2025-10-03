@@ -10,20 +10,35 @@ const Loginpage = () => {
       <input
         type="text"
         placeholder="Business name"
-        className="border border-gray-300 rounded-md p-2 bg-white w-[75%] h-[4rem]"
+        className="border border-gray-300 rounded-md p-2 bg-white w-[75%] h-[4rem] text-black text-2xl placeholder-black placeholder-opacity-100 px-5"
       />
       <label htmlFor="Business name "></label>
       <input
         type="text"
-        placeholder="Business name"
-        className="border border-gray-300 rounded-md p-2 bg-white w-[75%] h-[4rem]"
+        placeholder="Email"
+        className="border border-gray-300 rounded-md p-2 bg-white w-[75%] h-[4rem] text-black text-2xl placeholder-black placeholder-opacity-100 px-5"
       />
       <label htmlFor="Business name "></label>
       <input
         type="text"
-        placeholder="Business name"
-        className="border border-gray-300 rounded-md p-2 bg-white w-[75%] h-[4rem]"
+        placeholder="Password"
+        className="border border-gray-300 rounded-md p-2 bg-white w-[75%] h-[4rem] text-black text-2xl placeholder-black placeholder-opacity-100 px-5"
       />
+
+      <button className="cursor-pointer border border-gray-300 rounded-md p-2 bg-pink-400 w-[75%] h-[4rem] text-center text-2xl text-white font-bold mt-3">
+        Continue
+      </button>
+      {/* <input
+        type=""
+        placeholder="Continue"
+        className="cursor-pointer border border-gray-300 rounded-md p-2 bg-pink-400 w-[75%] h-[4rem] text-center text-2xl placeholder-white placeholder-opacity-100 font-bold px-5"
+      /> */}
+      <p className="text-white lg:text-2xl mt-3 text-sm font-bold">
+        Already have an account?{" "}
+        <a href="" className="cursor-pointer">
+          Log in
+        </a>
+      </p>
     </div>
   );
 };
