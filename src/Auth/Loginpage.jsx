@@ -1,7 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { AuthContext } from "../Context/Authcontext";
 
 const Loginpage = () => {
+  const handleContinue = (e) => {
+    e.preventDefault();
+    Login();
+  };
+
   const {
     email,
     setEmail,
@@ -34,7 +39,7 @@ const Loginpage = () => {
       />
       <label htmlFor="Business name "></label>
       <input
-        type="text"
+        type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
@@ -42,7 +47,7 @@ const Loginpage = () => {
       />
 
       <button
-        onClick={Login}
+        onClick={handleContinue}
         className="cursor-pointer border border-gray-300 rounded-md p-2 bg-pink-400 w-[75%] h-[4rem] text-center text-2xl text-white font-bold mt-3"
       >
         Continue

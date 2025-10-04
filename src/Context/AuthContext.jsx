@@ -4,12 +4,19 @@ import { createContext } from "react";
 export const AuthContext = createContext();
 
 export const Authprovider = ({ children }) => {
+  const [user, setUser] = useState(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [businessName, setBusinessName] = useState(null);
+  const [businessName, setBusinessName] = useState("");
 
   const Login = () => {
-    setBusinessName(businessName);
+    if (businessName.trim() !== "") {
+      setUser(businessName);
+    }
+  };
+
+  const isAuthenticated = () => {
+    return user != null;
   };
   return (
     <AuthContext.Provider
@@ -20,7 +27,10 @@ export const Authprovider = ({ children }) => {
         setPassword,
         businessName,
         setBusinessName,
+        user,
+        setUser,
         Login,
+        isAuthenticated,
       }}
     >
       {children}
