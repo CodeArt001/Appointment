@@ -16,9 +16,9 @@ function App() {
   const isAuthenticated = !!user;
   return (
     <>
-      <div className="dark:bg-black dark:text-white bg-white min-h-screen text-black transition-colors duration-500">
+      <div className="bg-white text-black dark:bg-black dark:text-white min-h-screen transition-colors duration-500">
         <BrowserRouter>
-          <div className="absolute top-4 justify-end right-6  ">
+          <div className="absolute top-4 justify-end lg:right-6 right-2 ">
             <Themetoggle />
           </div>
 

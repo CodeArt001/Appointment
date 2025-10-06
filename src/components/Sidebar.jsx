@@ -12,38 +12,38 @@ const Sidebar = () => {
     setActivePage((prev) => (prev === page ? null : page));
   };
   return (
-    <div className="flex dark:text-white ">
-      <div className="min-h-screen flex flex-col gap-10  cursor-pointer  px-4 py-[4%] lg:py-[5%]  lg:my-0 my-5 shadow-2xl shadow-violet-500   border-white bg-white-50 lg:w-[10%] w-[7rem] ">
+    <div className="flex dark:text-white  ">
+      <div className="min-h-screen flex flex-col gap-10  cursor-pointer  px-4 py-[4%] lg:py-[5%]  lg:my-0 my-5 shadow-2xl shadow-violet-500   border-white bg-white-50 lg:w-[10%] w-[6rem] ">
         <img
           src={logo}
           alt="logo"
-          className="w-27 lg:h-10 h-5 cursor-pointer shadow-2xl shadow-violet-200"
+          className="w-27 lg:h-10 h-5 cursor-pointer shadow-2xl shadow-violet-100"
         />
 
         <div className="">
           <div
             onClick={() => handleToggle("dashboard")}
-            className="flex flex-col font-bold gap-2 items-center text-[0]"
+            className="flex flex-col font-bold gap-2 items-center  text-[0] text-xs"
           >
-            <MdAddHomeWork className="lg:w-15 lg:h-15 w-10 h-10 cursor-pointer" />
+            <MdAddHomeWork className="lg:w-15 lg:h-15 w-8 h-10 cursor-pointer" />
             <p>Dashboard</p>
           </div>
         </div>
 
-        <div className="flex flex-col font-bold gap-2 items-center">
-          <MdHomeRepairService className="lg:w-15 lg:h-15 w-10 h-10 cursor-pointer" />
+        <div className="flex flex-col font-bold gap-2 items-center text-[0] text-xs ">
+          <MdHomeRepairService className="lg:w-15 lg:h-8 w-10 h-10 cursor-pointer" />
           <p>Services</p>
         </div>
-        <div className="flex flex-col font-bold gap-2 items-center">
-          <MdEventAvailable className="lg:w-15 lg:h-15 w-10 h-10 cursor-pointer" />
+        <div className="flex flex-col font-bold gap-2 items-center text-[0] text-xs ">
+          <MdEventAvailable className="lg:w-15 lg:h-15 w-8 h-10 cursor-pointer" />
           <p>Appointments</p>
         </div>
-        <div className="flex flex-col font-bold gap-2 items-center">
-          <PiLinkSimpleFill className="lg:w-15 lg:h-15 w-10 h-10 cursor-pointer" />
+        <div className="flex flex-col font-bold gap-2 items-center text-[0] text-xs ">
+          <PiLinkSimpleFill className="lg:w-15 lg:h-15 w-8 h-10 cursor-pointer" />
           <p>My Links</p>
         </div>
       </div>
-      <div className="flex-1 p-6 w-full">
+      <div className="flex-1 w-full">
         {activePage === "dashboard" && <Dashboard />}
       </div>
     </div>
