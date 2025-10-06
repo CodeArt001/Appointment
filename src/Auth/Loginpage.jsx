@@ -21,7 +21,7 @@ const Loginpage = () => {
     Login,
   } = useContext(AuthContext);
   return (
-    <div className="min-h-screen flex flex-col lg:gap-5 gap-3 items-center justify-center hover:bg-amber-300 cursor-pointer bg-gradient-to-b from-purple-600 via-purple-500 to-pink-600 focus:ring-2 focus:ring-blue-500">
+    <div className="min-h-screen flex flex-col lg:gap-5  gap-3 items-center justify-center hover:bg-amber-300 cursor-pointer bg-gradient-to-b from-purple-600 via-purple-500 to-pink-600 focus:ring-2 focus:ring-blue-500">
       <h1 className="lg:text-5xl text-center text-3xl font-bold font-neue lg:w-[90%] w-[60%] ">
         Create Your Booking Page{" "}
       </h1>
