@@ -12,12 +12,12 @@ const Sidebar = () => {
     setActivePage((prev) => (prev === page ? null : page));
   };
   return (
-    <div className="flex">
-      <div className="min-h-screen flex flex-col gap-10  cursor-pointer  px-4 py-[4%] lg:py-[5%]  lg:my-0 my-5 shadow-2xl shadow-violet-500 border-white bg-white-50 lg:w-[10%] w-[7rem] ">
+    <div className="flex dark:text-white ">
+      <div className="min-h-screen flex flex-col gap-10  cursor-pointer  px-4 py-[4%] lg:py-[5%]  lg:my-0 my-5 shadow-2xl shadow-violet-500   border-white bg-white-50 lg:w-[10%] w-[7rem] ">
         <img
           src={logo}
           alt="logo"
-          className="w-27 lg:h-10 h-5 cursor-pointer"
+          className="w-27 lg:h-10 h-5 cursor-pointer shadow-2xl shadow-violet-200"
         />
 
         <div className="">

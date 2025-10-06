@@ -1,10 +1,14 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../Context/Authcontext";
+import { useNavigate } from "react-router-dom";
 
 const Loginpage = () => {
+  const navigate = useNavigate();
+
   const handleContinue = (e) => {
     e.preventDefault();
     Login();
+    navigate("/sidebar");
   };
 
   const {
