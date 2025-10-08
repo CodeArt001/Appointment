@@ -13,3 +13,20 @@
   src: url("/fonts/neue-regrade-2.otf") format("opentype");
   font-weight: 700; /* Bold */
 }
+
+@theme {
+  --animate-wiggle: wiggle 2s ease-in-out infinite;
+  @keyframes wiggle {
+    0% {
+      opacity: 0;
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(-5deg);
+    }
+  }
+}

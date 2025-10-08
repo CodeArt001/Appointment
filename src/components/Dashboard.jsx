@@ -14,7 +14,10 @@ const Dashboard = () => {
     <div className="lg:w-[80%] md:w-full w-full  shadow-2xl shadow-violet-500 min-h-screen px-5 pb-10 overflow-y-auto mt-9 ">
       <div className="flex flex-col  text-center  py-3 gap-3  ">
         <p className="lg:text-5xl md:text-5xl text-2xl  font-Neue font-bold animate-pulse drop-shadow-[0_0_20px_#facc15] ">
-          Hi {""} {businessName} ✌️
+          Hi {""} {businessName}{" "}
+          <span className="animate-wiggle inline-block lg:text-6xl md:text-7xl text-3xl">
+            👋
+          </span>
         </p>
         <div className=" lg:flex lg:flex-row flex flex-col lg:gap-8 md:gap-8  gap-5 items-center justify-center font-bold lg:text-[1.3rem] md:text-[2rem] text-[1rem] mt-3 dark:text-black">
           <div className="flex flex-col items-center border-white shadow bg-white px-4 py-5 rounded-3xl lg:[w-0] w-[13rem] md:w-[20rem] ">

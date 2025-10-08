@@ -7,7 +7,7 @@ module.exports = {
       keyframes: {
         glow: {
           "0%, 100%": {
-            boxShadow: "0 0 15px 3px rgba(139, 92, 246, 0.5)", // violet-500
+            boxShadow: "0 0 15px 3px rgba(139, 92, 246, 0.5)",
           },
           "50%": {
             boxShadow: "0 0 25px 8px rgba(139, 92, 246, 0.8)",
@@ -19,7 +19,7 @@ module.exports = {
       },
 
       fontFamily: {
-        neue: ["Neue-Regrade", "sans-serif"], // 👈 custom font
+        neue: ["Neue-Regrade", "sans-serif"],
       },
     },
   },
