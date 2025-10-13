@@ -31,16 +31,21 @@ const Loginpage = () => {
         placeholder="Business name"
         value={businessName}
         onChange={(e) => setBusinessName(e.target.value)}
-        className="border border-gray-300 rounded-md p-2 bg-white w-[75%] h-[4rem] text-black text-2xl placeholder-black placeholder-opacity-100 px-5"
+        className=" border border-gray-300 rounded-md p-2 bg-white w-[75%] h-[4rem] text-black text-2xl placeholder-black placeholder-opacity-100 px-5"
       />
-      <label htmlFor="Email "></label>
-      <input
-        type="text"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className="border border-gray-300 rounded-md p-2 bg-white w-[75%] h-[4rem] text-black text-2xl placeholder-black placeholder-opacity-100 px-5"
-      />
+      <div className="flex flex-col items-center  w-full mt-3">
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          required
+          onChange={(e) => setEmail(e.target.value)}
+          className="peer invalid:border-red-500 invalid:focus:ring-red-500 invalid:border-2 invalid:text-red-500 focus:outline focus:outline-sky-500 border border-gray-300 rounded-md p-2 bg-white w-[75%] h-[4rem] text-black text-2xl placeholder-black px-5 transition-all duration-300"
+        />
+        <p className="text-black  mt-1 lg:text-2xl text-sm w-[75%]  opacity-0 peer-invalid:opacity-100 transition-all duration-300 text-left">
+          Please provide a valid email
+        </p>
+      </div>
       <label htmlFor="Business name "></label>
       <input
         type="password"

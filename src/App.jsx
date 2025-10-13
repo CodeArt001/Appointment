@@ -9,6 +9,8 @@ import Dashboard from "./components/Dashboard";
 import { useContext } from "react";
 import { AuthContext } from "./Context/Authcontext";
 import Themetoggle from "./components/Themetoggle";
+import Service from "./components/Service";
+import Availabilty from "./components/Availabilty";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -30,6 +32,8 @@ function App() {
               element={isAuthenticated ? <Sidebar /> : <Navigate to={"/"} />}
             />
             <Route path="/dashboard" element={<Dashboard user={user} />} />
+            <Route path="/services" element={<Service />} />
+            <Route path="/availability" element={<Availabilty />} />
           </Routes>
         </BrowserRouter>
       </div>

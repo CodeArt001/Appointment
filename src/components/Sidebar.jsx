@@ -3,8 +3,10 @@ import { MdAddHomeWork } from "react-icons/md";
 import { MdHomeRepairService } from "react-icons/md";
 import { MdEventAvailable } from "react-icons/md";
 import { PiLinkSimpleFill } from "react-icons/pi";
-import logo from "../assets/images/LOGo.png";
+import logo from "../assets/images/LOGO2.jpg";
 import Dashboard from "./Dashboard";
+import Service from "./Service";
+import Availabilty from "./Availabilty";
 
 const Sidebar = () => {
   const [activePage, setActivePage] = useState(null);
@@ -12,39 +14,49 @@ const Sidebar = () => {
     setActivePage((prev) => (prev === page ? null : page));
   };
   return (
-    <div className="flex dark:text-white  ">
-      <div className="min-h-screen flex flex-col gap-10  cursor-pointer  px-4 py-[4%] lg:py-[5%]  lg:my-0 my-5 shadow-2xl shadow-violet-500   border-white bg-white-50 lg:w-[10%] w-[6rem] ">
-        <img
-          src={logo}
-          alt="logo"
-          className="w-27 lg:h-10 h-5 cursor-pointer shadow-2xl shadow-violet-100"
-        />
-
+    <div className="flex-grow dark:text-white  ">
+      <div className=" flex flex-row justify-between items-center w-full cursor-pointer px-4 py-[10%] lg:py-[5%] lg:my-0 my-5 shadow-violet-300 border-white bg-white-50 max-w-full  ">
+        <div className="flex items-center gap-3 shadow-2xl shadow-violet-100 bg-white px-3 py-2 rounded-3xl text-black">
+          <img
+            src={logo}
+            alt="logo"
+            className=" lg:size-15 size-5 cursor-pointer "
+          />
+          <p className="lg:text-6xl text-sm font-bold">BookMe</p>
+        </div>
         <div className="">
           <div
             onClick={() => handleToggle("dashboard")}
-            className="flex flex-col font-bold gap-2 items-center  text-[0] text-xs"
+            className="flex flex-col font-bold gap-2 items-center  lg:text-[2rem] text-xs"
           >
             <MdAddHomeWork className="lg:w-15 lg:h-15 w-8 h-10 cursor-pointer" />
             <p>Dashboard</p>
           </div>
         </div>
 
-        <div className="flex flex-col font-bold gap-2 items-center text-[0] text-xs ">
-          <MdHomeRepairService className="lg:w-15 lg:h-8 w-10 h-10 cursor-pointer" />
+        <div
+          onClick={() => handleToggle("services")}
+          className="flex flex-col font-bold gap-2 items-center lg:text-[2rem] text-xs "
+        >
+          <MdHomeRepairService className="lg:size-17 w-10 h-10 cursor-pointer" />
           <p>Services</p>
         </div>
-        <div className="flex flex-col font-bold gap-2 items-center text-[0] text-xs ">
+        <div
+          onClick={() => handleToggle("availability")}
+          className="flex flex-col font-bold gap-2 items-center lg:text-[2rem] text-xs "
+        >
           <MdEventAvailable className="lg:w-15 lg:h-15 w-8 h-10 cursor-pointer" />
-          <p>Appointments</p>
+          <p>Availability</p>
         </div>
-        <div className="flex flex-col font-bold gap-2 items-center text-[0] text-xs ">
+        <div className="flex flex-col font-bold gap-2 items-center lg:text-[2rem] text-xs ">
           <PiLinkSimpleFill className="lg:w-15 lg:h-15 w-8 h-10 cursor-pointer" />
-          <p>My Links</p>
+          <p>Links</p>
         </div>
       </div>
       <div className="flex-1 w-full">
         {activePage === "dashboard" && <Dashboard />}
+        {activePage === "services" && <Service />}
+        {activePage === "availability" && <Availabilty />}
       </div>
     </div>
   );
