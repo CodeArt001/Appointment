@@ -11,7 +11,7 @@ const Availabilty = () => {
   const [selectedDate, setSelectedDate] = useState(18);
   const [selectTime, setSelectTime] = useState("9:00AM");
   return (
-    <div className="px-10">
+    <div className="lg:px-10">
       <div className="bg-white rounded-lg shadow ">
         <div className="mx-auto p-6 text-center">
           <h1 className="font-bold text-black lg:text-3xl text-2xl">
@@ -49,7 +49,7 @@ const Availabilty = () => {
             ))}
           </div>
         </div>
-        <div className="grid grid-rows-2 grid-cols-2 gap-4 p-5 text-center  text-black items-center justify-center w-[30rem] mx-auto">
+        <div className="grid grid-rows-2 grid-cols-2 gap-4 lg:px-10 px-10 mb-3 text-center  text-black items-center justify-center lg:w-[30rem] mx-auto">
           {times.map((time) => (
             <div key={time} onClick={() => setSelectTime(time)}>
               <div
@@ -64,9 +64,11 @@ const Availabilty = () => {
             </div>
           ))}
         </div>
-        <button className="flex mx-auto bg-gradient-to-b from-purple-600 to-purple-400 text-white font-bold py-2 px-40 mb-5 rounded-3xl hover:from-purple-500 hover:to-purple-300">
-          Confirm Time
-        </button>
+        <div className="flex ">
+          <button className="flex  mx-auto bg-gradient-to-b from-purple-600 to-purple-400 text-white font-bold py-2 lg:px-40 px-[25px] my-5 rounded-3xl hover:from-purple-500 hover:to-purple-300">
+            Confirm Time
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -11,6 +11,8 @@ import { AuthContext } from "./Context/Authcontext";
 import Themetoggle from "./components/Themetoggle";
 import Service from "./components/Service";
 import Availabilty from "./components/Availabilty";
+// import Link from ".components/Link";
+import Visit from "./components/Visit";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -34,6 +36,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard user={user} />} />
             <Route path="/services" element={<Service />} />
             <Route path="/availability" element={<Availabilty />} />
+            <Route path="/links" element={<Visit />} />
           </Routes>
         </BrowserRouter>
       </div>

@@ -101,21 +101,21 @@ const Service = () => {
           onChange={(e) => setServiceName(e.target.value)}
           type="text"
           placeholder=" New Service"
-          className="placeholder-white placeholder-opacity-100 absolute flex justify-end right-5 bg-gradient-to-b from-violet-700 to-purple-600 text-white px-2 py-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          className="placeholder-white placeholder-opacity-100 absolute flex lg:justify-end lg:right-5 bg-gradient-to-b from-violet-700 to-purple-600 text-white px-2 py-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 lg:mt-0 mt-3 lg:w-0"
         />
         <input
           value={duration}
           onChange={(e) => setDuration(e.target.value)}
           type="text"
           placeholder="Duration (e.g. 30 mins)"
-          className="border border-gray-400 rounded-lg p-2  md:w-1/3 "
+          className="border border-gray-400 rounded-lg p-2 lg:w-0  w-1/2 lg:ml-o ml-3  md:w-1/3 lg:mt-0 mt-16 "
         />
         <input
           value={price}
           onChange={(e) => setPrice(e.target.value)}
           type="text"
           placeholder="Price (e.g. $20)"
-          className="border border-gray-400 rounded-lg p-2  md:w-1/3 ml-3"
+          className="border border-gray-400 rounded-lg p-2 lg:w-0 w-1/2 md:w-1/3 ml-3 lg:mt-0 mt-3"
         />
         <button
           onClick={handleNewService}
@@ -183,7 +183,7 @@ const Service = () => {
                   {editService !== item.id && (
                     <div
                       onClick={() => handleEditService(item)}
-                      className="text-3xl cursor-pointer absolute right-10 lg:right-10"
+                      className="text-3xl cursor-pointer absolute right-16 lg:right-10 "
                     >
                       <MdEdit />
                     </div>
@@ -191,7 +191,7 @@ const Service = () => {
                 </div>
                 {editService !== item.id && (
                   <MdDeleteForever
-                    className=" absolute right-10 lg:right-20 text-3xl cursor-pointer text-red-600"
+                    className=" absolute right-5 lg:right-20 text-3xl cursor-pointer text-red-600"
                     onClick={() => deleteService(item.id)}
                   />
                 )}

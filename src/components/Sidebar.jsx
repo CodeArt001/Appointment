@@ -7,6 +7,8 @@ import logo from "../assets/images/LOGO2.jpg";
 import Dashboard from "./Dashboard";
 import Service from "./Service";
 import Availabilty from "./Availabilty";
+// import { Links } from "react-router-dom";
+import Visit from "./Visit";
 
 const Sidebar = () => {
   const [activePage, setActivePage] = useState(null);
@@ -48,7 +50,10 @@ const Sidebar = () => {
           <MdEventAvailable className="lg:w-15 lg:h-15 w-8 h-10 cursor-pointer" />
           <p>Availability</p>
         </div>
-        <div className="flex flex-col font-bold gap-2 items-center lg:text-[2rem] text-xs ">
+        <div
+          onClick={() => handleToggle("links")}
+          className="flex flex-col font-bold gap-2 items-center lg:text-[2rem] text-xs "
+        >
           <PiLinkSimpleFill className="lg:w-15 lg:h-15 w-8 h-10 cursor-pointer" />
           <p>Links</p>
         </div>
@@ -57,6 +62,7 @@ const Sidebar = () => {
         {activePage === "dashboard" && <Dashboard />}
         {activePage === "services" && <Service />}
         {activePage === "availability" && <Availabilty />}
+        {activePage === "links" && <Visit />}
       </div>
     </div>
   );
