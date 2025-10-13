@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { AuthContext } from "../Context/Authcontext";
+import { AuthContext } from "./Context/AuthContext";
 import defaultImage from "../assets/images/LOGO2.jpg";
 
 const Visit = () => {

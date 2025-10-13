@@ -21,9 +21,6 @@ const Themetoggle = () => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
-  // const toggleTheme = () => {
-  //   setTheme((prev) => (prev === "dark" ? "light" : "dark"));
-  // };
   return (
     <div className="flex items-center rounded-lg border p-1 transition-all duration-500 hover:scale-105 shadow">
       <button onClick={toggleTheme} className="">

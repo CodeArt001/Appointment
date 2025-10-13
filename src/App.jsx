@@ -1,17 +1,14 @@
-// import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Loginpage from "./Auth/Loginpage";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
 import { useContext } from "react";
-import { AuthContext } from "./Context/Authcontext";
+import { AuthContext } from "./Context/AuthContext";
 import Themetoggle from "./components/Themetoggle";
 import Service from "./components/Service";
 import Availabilty from "./components/Availabilty";
-// import Link from ".components/Link";
+
 import Visit from "./components/Visit";
 
 function App() {

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AuthContext } from "../Context/Authcontext";
+import { AuthContext } from "../Context/AuthContext";
 import { IoIosNotifications } from "react-icons/io";
 import cal from "../assets/images/calendar.png";
 import earns from "../assets/images/earn.jpg";

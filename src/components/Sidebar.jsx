@@ -7,7 +7,7 @@ import logo from "../assets/images/LOGO2.jpg";
 import Dashboard from "./Dashboard";
 import Service from "./Service";
 import Availabilty from "./Availabilty";
-// import { Links } from "react-router-dom";
+
 import Visit from "./Visit";
 
 const Sidebar = () => {
