@@ -27,7 +27,7 @@ const Themetoggle = () => {
         <img
           src={theme === "dark" ? sunIcn : darkmode}
           alt=""
-          className="lg:w-8 lg:h-8 w-5 h-5"
+          className="lg:w-8 lg:h-8 w-3 h-3"
         />
       </button>
     </div>

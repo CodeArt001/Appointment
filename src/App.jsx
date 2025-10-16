@@ -19,7 +19,7 @@ function App() {
     <>
       <div className="bg-white text-black dark:bg-black dark:text-white min-h-screen transition-colors duration-500">
         <BrowserRouter>
-          <div className="absolute top-4 justify-end lg:right-6 right-2 ">
+          <div className="absolute top-4 justify-end lg:right-9 lg:py-3 right-3 py-5 md:right-8">
             <Themetoggle />
           </div>
 
