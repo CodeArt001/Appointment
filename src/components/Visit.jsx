@@ -4,7 +4,7 @@ import defaultImage from "../assets/images/LOGO2.jpg";
 
 const Visit = () => {
   const { user, bio, setBio } = useContext(AuthContext);
-  // const { handleBiochange } = useContext(AuthContext);
+
   const [image, setImage] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
 
@@ -29,7 +29,7 @@ const Visit = () => {
           />
           <div className="mt-18">
             <div className="text-black font-bold text-center my-2 lg:text-3xl text-sm">
-              {user} ✌️
+              {user?.businessName || "Guest"} ✌️
             </div>
             {isEditing ? (
               <div className="flex flex-col items-center gap-2">
@@ -60,7 +60,7 @@ const Visit = () => {
           </div>
           <label
             htmlFor="file-upload"
-            className="absolute font-bold top-43 bg-purple-600 text-white px-25 py-3 rounded-full cursor-pointer hover:bg-purple-700 my-3"
+            className="absolute font-bold top-[10rem] bg-purple-600 text-white px-25 py-3 rounded-full cursor-pointer hover:bg-purple-700 my-3"
           >
             Upload
           </label>

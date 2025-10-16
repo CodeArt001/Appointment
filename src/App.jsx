@@ -33,7 +33,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard user={user} />} />
             <Route path="/services" element={<Service />} />
             <Route path="/availability" element={<Availabilty />} />
-            <Route path="/links" element={<Visit />} />
+            <Route path="/visit" element={<Visit />} />
           </Routes>
         </BrowserRouter>
       </div>

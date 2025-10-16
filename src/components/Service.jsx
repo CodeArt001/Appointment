@@ -36,7 +36,9 @@ const Service = () => {
 
   const handleNewService = (e) => {
     e.preventDefault();
-    if (!services.trim()) return;
+    if (serviceName.trim() === "") return;
+    if (duration.trim() === "") return;
+    if (price.trim() === "") return;
     const newwService = {
       id: Date.now(),
       name: serviceName,
@@ -45,7 +47,7 @@ const Service = () => {
     };
     setServices((prev) => [...prev, newwService]);
 
-    setServices("");
+    // setServices("");
     setDuration("");
     setPrice("");
     setServiceName("");
@@ -101,21 +103,21 @@ const Service = () => {
           onChange={(e) => setServiceName(e.target.value)}
           type="text"
           placeholder=" New Service"
-          className="placeholder-white placeholder-opacity-100 absolute flex lg:justify-end lg:right-5 bg-gradient-to-b from-violet-700 to-purple-600 text-white px-2 py-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 lg:mt-0 mt-3 lg:w-0"
+          className="placeholder-white placeholder-opacity-100 absolute flex lg:justify-end lg:right-5 bg-gradient-to-b from-violet-700 to-purple-600 text-white px-2 py-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 lg:mt-0 mt-3 lg:w-1/5"
         />
         <input
           value={duration}
           onChange={(e) => setDuration(e.target.value)}
           type="text"
           placeholder="Duration (e.g. 30 mins)"
-          className="border border-gray-400 rounded-lg p-2 lg:w-0  w-1/2 lg:ml-o ml-3  md:w-1/3 lg:mt-0 mt-16 "
+          className="border border-gray-400 rounded-lg p-2 lg:w-1/5  w-1/2 lg:ml-o ml-3  md:w-1/3 lg:mt-0 mt-16 "
         />
         <input
           value={price}
           onChange={(e) => setPrice(e.target.value)}
           type="text"
           placeholder="Price (e.g. $20)"
-          className="border border-gray-400 rounded-lg p-2 lg:w-0 w-1/2 md:w-1/3 ml-3 lg:mt-0 mt-3"
+          className="border border-gray-400 rounded-lg p-2 lg:w-1/5 w-1/2 md:w-1/3 ml-3 lg:mt-2 mt-3"
         />
         <button
           onClick={handleNewService}
