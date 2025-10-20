@@ -7,7 +7,6 @@ import logo from "../assets/images/LOGO2.jpg";
 import Dashboard from "./Dashboard";
 import Service from "./Service";
 import Availabilty from "./Availabilty";
-
 import Visit from "./Visit";
 
 const Sidebar = () => {

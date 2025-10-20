@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -7,8 +7,10 @@ const Loginpage = () => {
 
   const handleContinue = (e) => {
     e.preventDefault();
-    Login();
-    navigate("/sidebar");
+    const success = Login();
+    if (success) {
+      navigate("/sidebar");
+    }
   };
 
   const {
@@ -19,6 +21,7 @@ const Loginpage = () => {
     businessName,
     setBusinessName,
     Login,
+    error,
   } = useContext(AuthContext);
   return (
     <div className="min-h-screen flex flex-col lg:gap-5  gap-3 items-center justify-center hover:bg-amber-300 cursor-pointer bg-gradient-to-b from-purple-600 via-purple-500 to-pink-600 focus:ring-2 focus:ring-blue-500">
@@ -68,6 +71,7 @@ const Loginpage = () => {
           Log in
         </a>
       </p>
+      {error && <p style={{ color: "black", fontSize: "20px" }}>{error}</p>}
     </div>
   );
 };

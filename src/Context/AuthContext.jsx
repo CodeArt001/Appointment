@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
   const [password, setPassword] = useState("");
   const [businessName, setBusinessName] = useState("");
   const [bio, setBio] = useState("");
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const savedUser = localStorage.getItem("user");
@@ -23,9 +24,27 @@ export const AuthProvider = ({ children }) => {
   }, [user]);
 
   const Login = () => {
-    if (businessName.trim() === "") return alert("Please enter business name");
-    if (email.trim() === "") return alert("Please enter email");
-    setUser({ businessName, email });
+    const trimmedBusinessName = businessName.trim();
+    const trimmedEmail = email.trim();
+
+    if (!trimmedBusinessName && !trimmedEmail) {
+      setError("Business name and Email are required.");
+      return false;
+    }
+
+    if (!trimmedBusinessName) {
+      setError("Business name is required.");
+      return false;
+    }
+
+    if (!trimmedEmail) {
+      setError("Email is required.");
+      return false;
+    }
+
+    setError(null);
+    setUser({ businessName: trimmedBusinessName, email: trimmedEmail });
+    return true;
   };
 
   const isAuthenticated = () => {
@@ -48,6 +67,7 @@ export const AuthProvider = ({ children }) => {
         bio,
         setBio,
         loading,
+        error,
       }}
     >
       {children}
