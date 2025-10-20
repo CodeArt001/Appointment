@@ -14,7 +14,14 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const savedUser = localStorage.getItem("user");
-    if (savedUser) setUser(JSON.parse(savedUser));
+    if (savedUser) {
+      try {
+        setUser(JSON.parse(savedUser));
+      } catch (err) {
+        console.error("Invalid user data in localStorage:", err);
+        localStorage.removeItem("user"); // remove bad data
+      }
+    }
     setLoading(false);
   }, []);
 
