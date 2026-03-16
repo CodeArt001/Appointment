@@ -5,7 +5,6 @@ import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
 import { useContext } from "react";
 import { AuthContext } from "./Context/AuthContext";
-import Themetoggle from "./components/Themetoggle";
 import Service from "./components/Service";
 import Availabilty from "./components/Availabilty";
 
@@ -19,9 +18,7 @@ function App() {
     <>
       <div className="bg-white text-black dark:bg-black dark:text-white min-h-screen transition-colors duration-500">
         <BrowserRouter>
-          <div className="absolute top-4 justify-end lg:right-9 lg:py-3 right-3 py-5 md:right-8">
-            <Themetoggle />
-          </div>
+          <div className="absolute top-4 justify-end lg:right-9 lg:py-3 right-3 py-5 md:right-8"></div>
 
           <Routes>
             <Route path="/" element={<Loginpage />} />

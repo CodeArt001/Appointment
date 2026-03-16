@@ -11,7 +11,7 @@ const Availabilty = () => {
   const [selectedDate, setSelectedDate] = useState(18);
   const [selectTime, setSelectTime] = useState("9:00AM");
   return (
-    <div className="lg:px-10">
+    <div className="lg:px-10 mt-3">
       <div className="bg-white rounded-lg shadow ">
         <div className="mx-auto p-6 text-center">
           <h1 className="font-bold text-black lg:text-3xl text-2xl">
@@ -65,7 +65,7 @@ const Availabilty = () => {
           ))}
         </div>
         <div className="flex ">
-          <button className="flex  mx-auto bg-gradient-to-b from-purple-600 to-purple-400 text-white font-bold py-2 lg:px-40 px-[25px] my-5 rounded-3xl hover:from-purple-500 hover:to-purple-300">
+          <button className="flex  mx-auto bg-purple-600  text-white font-bold py-2 lg:px-40 px-[25px] my-5 rounded-3xl ">
             Confirm Time
           </button>
         </div>

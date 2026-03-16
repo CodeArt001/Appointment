@@ -1,0 +1,16 @@
+{
+  "name": "Appointment App",
+  "short_name": "Appointment",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "description": "Appointment scheduling app built with React and Vite",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

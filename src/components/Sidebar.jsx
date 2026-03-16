@@ -16,23 +16,23 @@ const Sidebar = () => {
   };
   return (
     <div className="flex-grow dark:text-white  ">
-      <div className="lg:px-5 lg:py-3 py-1 md:px-3">
-        <div className=" border shadow-md rounded-4xl flex flex-row justify-between items-center w-full cursor-pointer px-4 py-[10%] lg:py-[5%] lg:my-0 my-5 shadow-violet-300 border-white bg-white-50 max-w-full  ">
-          <div className="flex items-center gap-3 shadow-2xl shadow-violet-100 bg-white px-3 py-2 rounded-3xl text-black">
-            <img
+      <div className="lg:px-5 py-1 md:px-3">
+        <div className=" border shadow-md rounded-4xl flex flex-row justify-between items-center w-full cursor-pointer px-8 py-[10%] lg:py-1 lg:my-0 my-5 shadow-violet-300 border-white bg-white-50 max-w-full  ">
+          <div className="flex items-center gap-3 shadow shadow-violet-100 bg-white px-3 py-2 rounded-3xl text-black">
+            {/* <img
               src={logo}
               alt="logo"
               className=" lg:size-15 size-5 md:size-10 cursor-pointer "
-            />
-            <p className="lg:text-6xl md:text-4xl text-sm font-bold">BookMe</p>
+            /> */}
+            <p className="lg:text-5xl md:text-4xl text-sm font-bold">BookMe</p>
           </div>
           <div className="">
             <div
               onClick={() => handleToggle("dashboard")}
               className="flex flex-col font-bold gap-2 items-center  lg:text-[2rem] text-xs"
             >
-              <MdAddHomeWork className="lg:w-15 lg:h-15 w-8 h-10 cursor-pointer" />
-              <p>Dashboard</p>
+              <MdAddHomeWork className="lg:w-10 lg:h-10 w-8 h-10 cursor-pointer" />
+              <p className="text-[20px]">Dashboard</p>
             </div>
           </div>
 
@@ -40,22 +40,22 @@ const Sidebar = () => {
             onClick={() => handleToggle("services")}
             className="flex flex-col font-bold gap-2 items-center lg:text-[2rem] text-xs "
           >
-            <MdHomeRepairService className="lg:size-17 w-10 h-10 cursor-pointer" />
-            <p>Services</p>
+            <MdHomeRepairService className="lg:size-10 w-10 h-10 cursor-pointer" />
+            <p className="text-[20px]">Services</p>
           </div>
           <div
             onClick={() => handleToggle("availability")}
             className="flex flex-col font-bold gap-2 items-center lg:text-[2rem] text-xs "
           >
-            <MdEventAvailable className="lg:w-15 lg:h-15 w-8 h-10 cursor-pointer" />
-            <p>Availability</p>
+            <MdEventAvailable className="lg:w-10 lg:h-10 w-8 h-10 cursor-pointer" />
+            <p className="text-[20px]">Availability</p>
           </div>
           <div
             onClick={() => handleToggle("links")}
-            className="flex flex-col font-bold gap-2 items-center lg:text-[2rem] text-xs "
+            className="flex flex-col font-bold gap-2 items-center lg:text-[2rem] text-xs  "
           >
-            <PiLinkSimpleFill className="lg:w-15 lg:h-15 w-8 h-10 cursor-pointer" />
-            <p>Links</p>
+            <PiLinkSimpleFill className="lg:w-10 lg:h-10 w-8 h-10 cursor-pointer " />
+            <p className="text-[20px]">Links</p>
           </div>
         </div>
       </div>

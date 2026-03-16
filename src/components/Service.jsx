@@ -64,7 +64,7 @@ const Service = () => {
 
   const handleSaveEdit = (id) => {
     setServices((prev) =>
-      prev.map((item) => (item.id === id ? { ...item, ...editedData } : item))
+      prev.map((item) => (item.id === id ? { ...item, ...editedData } : item)),
     );
     setEditService(null);
   };
@@ -103,7 +103,7 @@ const Service = () => {
           onChange={(e) => setServiceName(e.target.value)}
           type="text"
           placeholder=" New Service"
-          className="placeholder-white placeholder-opacity-100 absolute flex lg:justify-end lg:right-5 bg-gradient-to-b from-violet-700 to-purple-600 text-white px-2 py-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 lg:mt-0 mt-3 lg:w-1/5"
+          className="placeholder-white placeholder-opacity-100 absolute flex lg:justify-end lg:right-5 bg-violet-700  text-white px-2 py-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 lg:mt-0 mt-3 lg:w-1/5"
         />
         <input
           value={duration}

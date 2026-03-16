@@ -19,7 +19,7 @@ const Visit = () => {
     setIsEditing(false);
   };
   return (
-    <div className="flex items-center justify-center bg-white rounded-2xl shadow relative flex-col px-10 py-20">
+    <div className="flex items-center justify-center bg-white rounded-2xl shadow relative flex-col px-10 py-20 mt-3">
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center relative">
           <img
